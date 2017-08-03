@@ -21,6 +21,14 @@ todo.save().then((data) =>{
   //console.log(req.body);
 })
 
+app.get('/todos',(req,res) =>{
+  Todo.find().then((data) =>{
+    res.status(200).send({data:data});
+  }, (err) =>{
+    res.status(400).send(err);
+  })
+})
+
 app.listen(3000, ()=>{
   console.log('server is up and running');
 })
