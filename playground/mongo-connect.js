@@ -1,6 +1,6 @@
 var mongoclient = require('mongodb').MongoClient;
 
-mongoclient.connect('mongodb://localhost:27017/Todoapp', (err, db) => {
+mongoclient.connect('todoApp:nodejsapp@ds161159.mlab.com:61159/nodejs-todo-app', (err, db) => {
  if(err){
    return console.log('unable to connect to mongo db');
  }
